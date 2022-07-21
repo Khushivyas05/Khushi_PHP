@@ -1,0 +1,6 @@
+<?php
+$a=10;
+$b=3;
+$a%=$b;
+echo "The answer is :".$a;
+?>
