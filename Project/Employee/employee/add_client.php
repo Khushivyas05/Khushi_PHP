@@ -23,7 +23,6 @@ include_once('header.php');
               <label class="control-label">Name</label>
               <input type="text" placeholder="Name" required="">
             </div>
-            hi 
             <div class="clearfix"> </div>
             </div>
             
