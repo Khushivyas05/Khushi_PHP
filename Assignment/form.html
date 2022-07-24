@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+<form>
+<fieldset>
+<h1>Step:1 Your details</h1>
+<div>
+<label for="name" style="margin-left:20px">Name:</label>
+<input type="text" id="name" name="name" placeholder="First and last name" style="padding:5px;width:250px"></input><br>
+</div>
+<div>
+<label for="email" style="margin-left:20px">E-mail:</label>
+<input type="text" id="email" name="email" placeholder="example@domain.com" style="padding:5px;width:250px"></input><br>
+</div>
+<div>
+<label for="phone" style="margin-left:20px">Phone no:</label>
+<input type="text" id="phone" name="phone" placeholder="Eg.+447500000000" style="padding:5px;width:250px"></input><br>
+</div>
+
+<h1>Step:2 Delivery Address</h1>
+<div>
+<label for="add" style="margin-left:20px; vertical-align: top;">Address</label>
+<textarea name="add" rows="10" cols="30" style="padding:5px;width:250px"></textarea><br>
+</div>
+<div>
+<label for="post" style="margin-left:20px">Post code:</label>
+<input type="text" id="post" name="post" style="padding:5px;width:250px"></input><br>
+</div>
+<div>
+<label for="country" style="margin-left:20px">Country:</label>
+<input type="text" id="country" name="country" style="padding:5px;width:250px"></input><br>
+</div>
+
+<h1>Step:3 Card details</h1>
+<div>
+<label for="card" style="margin-left:20px">Card type:</label>
+<input type="radio" id="card" name="card" value="visa" checked>Visa</input>
+<input type="radio" id="card" name="card" value="amex">Amex</input>
+<input type="radio" id="card" name="card" value="mastercard">Mastercard</input><br>
+</div>
+<div>
+<label for="cardno" style="margin-left:20px">Card number:</label>
+<input type="text" id="cardno" name="cardno" style="padding:5px;width:250px"></input><br>
+</div>
+<div>
+<label for="security" style="margin-left:20px">Security code:</label>
+<input type="text" id="security" name="security" style="padding:5px;width:250px"></input><br>
+</div>
+<div>
+<label for="namec" style="margin-left:20px">Name on card:</label>
+<input type="text" id="namec" name="namec" placeholder="Exact name as on the card" style="padding:5px;width:250px"></input><br>
+</div>
+
+<button type="button" onclick="alert('Order placed')">BUY IT!</button>
+</fieldset>
+</form>
+</body>
+</html>
