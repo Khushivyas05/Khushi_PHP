@@ -1,9 +1,10 @@
 <?php
-
-class control
+include_once('model.php');
+class control extends model
 {
 	function __construct()
 	{
+		model::__construct();
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
@@ -21,6 +22,7 @@ class control
 			include_once('add_client.php');
 			break;
 			case '/add_emp':
+			
 			include_once('add_emp.php');
 			break;
 			case '/dashboard':
@@ -52,6 +54,9 @@ class control
 			break;
 			case '/manage_user':
 			include_once('manage_user.php');
+			break;
+			case '/add_cartype':
+			include_once('add_cartype.php');
 			break;
 			
 			default:

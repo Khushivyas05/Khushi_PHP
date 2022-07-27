@@ -186,7 +186,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		              </ul>
 		            </li>
 					<li class="dropdown">
-		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Khushi<i class="caret"></i></span><img src="images/in8.jpg"></a>
+		              <a href="#" class="dropdown-toggle dropdown-at" data-toggle="dropdown"><span class=" name-caret">Khushi<i class="caret"></i></span><img src="images/in3.jpg"></a>
 		              <ul class="dropdown-menu " role="menu">
 		                <li><a href="profile"><i class="fa fa-user"></i>Edit Profile</a></li>
 		                <li><a href="inbox"><i class="fa fa-envelope"></i>Inbox</a></li>
@@ -214,6 +214,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					 <li>
                         <a href="manage_user" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage User</span> </a>
                     </li>
+					<li>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Cartype</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="add_cartype" class=" hvr-bounce-to-right"> <i class="fa fa-user nav_icon"></i>Add Cartype</a></li>
+                            
+                            <li><a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i>Manage Cartype</a></li>		
+					   </ul>
+                    </li>
 					 <li>
                         <a href="manage_contact" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Contact</span> </a>
                     </li>
@@ -227,9 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
                         <a href="manage_car" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Car</span> </a>
                     </li>
-					<li>
-                        <a href="manage_cartype" class=" hvr-bounce-to-right"><i class="fa fa-user nav_icon"></i> <span class="nav-label">Manage Cartype</span> </a>
-                    </li>
+					
 					
                     
                     
