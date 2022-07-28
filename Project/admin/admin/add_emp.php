@@ -17,7 +17,7 @@ include_once('header.php');
  		<div class="validation-form">
  	<!---->
   	    
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
          	<div class="vali-form">
             <div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
@@ -62,7 +62,7 @@ include_once('header.php');
              <div class="clearfix"> </div>
           
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>

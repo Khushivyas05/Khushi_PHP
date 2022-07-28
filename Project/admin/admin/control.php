@@ -21,8 +21,28 @@ class control extends model
 			case '/add_client':
 			include_once('add_client.php');
 			break;
-			case '/add_emp':
 			
+			case '/add_emp':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$user_name=$_REQUEST['user_name'];
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				$email_id=$_REQUEST['email_id'];
+				$contact_no=$_REQUEST['contact_no'];
+				$address=$_REQUEST['address'];
+				$arr=array("name"=>$name,"user_name"=>$user_name,"pass"=>$pass,"email_id"=>$email_id,"contact_no"=>$contact_no,"address"=>$address);
+				$res=$this->insert('employee',$arr);
+				if($res)
+				{
+					echo "<script> alert('Registered successfully') </script>";
+				}
+				else
+				{
+					echo "Not success";
+				}
+			}
 			include_once('add_emp.php');
 			break;
 			case '/dashboard':
@@ -55,9 +75,7 @@ class control extends model
 			case '/manage_user':
 			include_once('manage_user.php');
 			break;
-			case '/add_cartype':
-			include_once('add_cartype.php');
-			break;
+			
 			
 			default:
 			include_once('404.php');

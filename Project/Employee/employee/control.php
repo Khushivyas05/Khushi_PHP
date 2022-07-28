@@ -38,6 +38,9 @@ class control
 			case '/manage_user':
 			include_once('manage_user.php');
 			break;
+			case '/add_cartype':
+			include_once('add_cartype.php');
+			break;
 			
 			default:
 			include_once('404.php');
