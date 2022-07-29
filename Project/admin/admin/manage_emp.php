@@ -34,36 +34,23 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+						foreach($manage_emp_arr as $m)
+						{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>John</td>
-						<td>Doe</td>
-						<td>john@example.com</td>
-						<td>6589532698</td>
-						<td>Ghodasar</td>
+						<td><?php echo $m->emp_id;?></td>
+						<td><?php echo $m->name;?></td>
+						<td><?php echo $m->user_name;?></td>
+						<td><?php echo $m->email_id;?></td>
+						<td><?php echo $m->contact_no;?></td>
+						<td><?php echo $m->address;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>John</td>
-						<td>Doe</td>
-						<td>john@example.com</td>
-						<td>6589532698</td>
-						<td>Ghodasar</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
-					  <tr>
-						<td>3</td>
-						<td>John</td>
-						<td>Doe</td>
-						<td>john@example.com</td>
-						<td>6589532698</td>
-						<td>Ghodasar</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
+					  <?php
+						}
+					  ?>
 					</tbody>
 				  </table>
 				</div>
