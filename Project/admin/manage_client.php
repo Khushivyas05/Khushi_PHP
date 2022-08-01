@@ -38,35 +38,27 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_client_arr as $mc)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>John Doe</td>
-						<td>john@example.com</td>
-						<td>john@example.com</td>
-						<td>878454545552</td>
-						<td>Ghodasar</td>
-						<td>878454545536</td>
-						<td>878454545536</td>
-						<td>GJ6565</td>
-						<td>54556232</td>
+						<td><?php echo $mc->client_id;?></td>
+						<td><?php echo $mc->name;?></td>
+						<td><?php echo $mc->user_name;?></td>
+						<td><?php echo $mc->email_id;?></td>
+						<td><?php echo $mc->contact_no;?></td>
+						<td><?php echo $mc->address;?></td>
+						<td><?php echo $mc->a_no;?></td>
+						<td><?php echo $mc->dl_no;?></td>
+						<td><?php echo $mc->puc_no;?></td>
+						<td><?php echo $mc->insurance;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  <tr>
-						<td>2</td>
-						<td>John Doe</td>
-						<td>john@example.com</td>
-						<td>john@example.com</td>
-						<td>878454545552</td>
-						<td>Ghodasar</td>
-						<td>878454545536</td>
-						<td>878454545536</td>
-						<td>GJ6565</td>
-						<td>54556232</td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
-					  </tr>
-					  
+					<?php
+					}
+					?>
 					</tbody>
 				  </table>
 				</div>

@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage Contact</span>
+				<span>Manage User</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,28 +18,43 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage Contact</h2>
+				  <h2>Manage User</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Cont_id</th>
+						<th>Cust_id</th>
 						<th>Name</th>
-						<th>Email-id</th>
+						<th>User_name</th>
+						<th>Email_id</th>
 						<th>Contact_no</th>
+						<th>Address</th>
+						<th>Aadhar card no.</th>
+						<th>Driving license no.</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_user_arr as $mu)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>John Doe</td>
-						<td>john@example.com</td>
-						<td>5652454545</td>
+						<td><?php echo $mu->cust_id;?></td>
+						<td><?php echo $mu->name;?></td>
+						<td><?php echo $mu->user_name;?></td>
+						<td><?php echo $mu->email_id;?></td>
+						<td><?php echo $mu->contact_no;?></td>
+						<td><?php echo $mu->address;?></td>
+						<td><?php echo $mu->a_no;?></td>
+						<td><?php echo $mu->dl_no;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
+					<?php
+					}
+					?>
 					  
 					</tbody>
 				  </table>

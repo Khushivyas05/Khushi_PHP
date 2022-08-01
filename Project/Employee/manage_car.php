@@ -36,19 +36,25 @@ include_once('header.php');
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_car_arr as $m)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>2</td>
-						<td>Maruti Suzuki Ciaz</td>
-						<td>Good car</td>
-						<td>1500</td>
-						<td>dddf</td>
-						<td>Sedan</td>
-						<td>Petrol</td>
+						<td><?php echo $m->car_id;?></td>
+						<td><?php echo $m->client_id;?></td>
+						<td><?php echo $m->name;?></td>
+						<td><?php echo $m->des;?></td>
+						<td><?php echo $m->price;?></td>
+						<td><img src="img/<?php echo $m->img;?>" width="80px" height="80px"/></td>
+						<td><?php echo $m->type;?></td>
+						<td><?php echo $m->fuel_type;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  
+					<?php
+					}
+					?>  
 					</tbody>
 				  </table>
 				</div>

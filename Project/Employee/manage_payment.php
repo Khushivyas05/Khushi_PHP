@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage Feedback</span>
+				<span>Manage Payment</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,29 +18,35 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage Feedback</h2>
+				  <h2>Manage Payment</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Feedback_id</th>
+						<th>Payment_id</th>
 						<th>Cust_id</th>
-						<th>Name</th>
-						<th>Comment</th>
+						<th>Booking_id</th>
+						<th>Payment type</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_payment_arr as $m)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>3</td>
-						<td>John Deo</td>
-						<td>Nice car</td>
+						<td><?php echo $m->payment_id;?></td>
+						<td><?php echo $m->cust_id;?></td>
+						<td><?php echo $m->booking_id;?></td>
+						<td><?php echo $m->payment_type;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  
+					<?php
+					}
+					?>  
 					</tbody>
 				  </table>
 				</div>

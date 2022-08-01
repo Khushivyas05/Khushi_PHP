@@ -7,7 +7,7 @@ include_once('header.php');
 		    	<h2>
 				<a href="dashboard">Home</a>
 				<i class="fa fa-angle-right"></i>
-				<span>Manage Contact</span>
+				<span>Manage Car</span>
 				</h2>
 		    </div>
 		<!--//banner-->
@@ -18,29 +18,43 @@ include_once('header.php');
 			<div class="blank-page">
 				
 				<div class="container mt-3">
-				  <h2>Manage Contact</h2>
+				  <h2>Manage Car</h2>
 
 				  <table class="table">
 					<thead>
 					  <tr>
-						<th>Cont_id</th>
+						<th>car_id</th>
+						<th>client_id</th>
 						<th>Name</th>
-						<th>Email-id</th>
-						<th>Contact_no</th>
+						<th>Description</th>
+						<th>Price</th>
+						<th>Image</th>
+						<th>Type</th>
+						<th>Fuel type</th>
 						<th>Edit</th>
 						<th>Delete</th>
 					  </tr>
 					</thead>
 					<tbody>
+					<?php
+					foreach($manage_car_arr as $m)
+					{
+					?>
 					  <tr>
-						<td>1</td>
-						<td>John Doe</td>
-						<td>john@example.com</td>
-						<td>5652454545</td>
+						<td><?php echo $m->car_id;?></td>
+						<td><?php echo $m->client_id;?></td>
+						<td><?php echo $m->name;?></td>
+						<td><?php echo $m->des;?></td>
+						<td><?php echo $m->price;?></td>
+						<td><?php echo $m->img;?></td>
+						<td><?php echo $m->type;?></td>
+						<td><?php echo $m->fuel_type;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="#" class="btn btn-danger">Delete</a></td>
 					  </tr>
-					  
+					<?php
+					}
+					?>
 					</tbody>
 				  </table>
 				</div>
