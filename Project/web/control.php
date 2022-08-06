@@ -23,6 +23,12 @@ class control
 			case '/services':
 			include_once('services.php');
 			break;
+			case '/login':
+			include_once('login.php');
+			break;
+			case '/signup':
+			include_once('signup.php');
+			break;
 			
 			default:
 			include_once('blog.php');

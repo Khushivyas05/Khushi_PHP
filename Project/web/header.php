@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-	<title>Auto cars a Auto Mobile Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+	<title>Rent my car</title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<!-- jQuery (necessary JavaScript plugins) -->
 	<!-- Custom Theme files -->

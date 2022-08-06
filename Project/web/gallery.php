@@ -8,10 +8,13 @@ include_once('header.php');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>AUTO <span>CARS</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CARS</span></a></h1>
 				</div>
 				<div class="top_details">
-					<p><span></span> (880)123 2500</p>
+				<ul>
+					<li><a href="login">Login</a></li>
+					<li><a href="signup">Sign up</a></li>
+				<ul>
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">
