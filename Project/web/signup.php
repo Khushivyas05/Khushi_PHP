@@ -37,7 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<span></span>
 					</div>
 					<div class="styled-input w3ls-text">
-						<input type="password" name="Pass" required=""> 
+						<input type="password" name="pass" required=""> 
 						<label>Password</label>
 						<span></span>
 					</div> 

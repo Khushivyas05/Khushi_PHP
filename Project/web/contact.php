@@ -12,9 +12,23 @@
 				</div>
 				<div class="top_details">
 				<ul>
+					<?php
+					if(isset($_SESSION['user_name']))
+					{
+					?>
+					<li><a href="logout">Logout</a></li>
+					<li><a href="signup">My profile</a></li>
+					<?php
+					}
+					else
+					{
+					?>
 					<li><a href="login">Login</a></li>
-					<li><a href="signup">Sign up</a></li>
-				<ul>
+					<li><a href="signup">Signup</a></li>
+					<?php
+					}
+					?>
+				</ul>
 					<div class="search">
 						<form>
 							<input type="text" value="" placeholder="Search Location">

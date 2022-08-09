@@ -4,20 +4,51 @@ class control extends model
 {
 	function __construct()
 	{
+		session_start();
 		model::__construct();
 		$path=$_SERVER['PATH_INFO'];
 		
 		switch($path)
 		{
 			case '/index':
+			if(isset($_REQUEST['submit']))
+			{
+				$user_name=$_REQUEST['user_name'];
+				$password=$_REQUEST['pass'];
+				$pass=md5($password);
+				
+				$where=array("user_name"=>$user_name,"pass"=>$pass);
+				$run=$this->select_where('employee',$where);
+				$res=$run->num_rows;
+				
+				if($res==1)
+				{
+					$_SESSION['employee']=$user_name;
+					echo "<script>
+						alert('Login success')
+						window.location='dashboard';
+					</script>";
+				}
+				else
+				{
+					echo "<script>
+						alert('login failed due to wrong credentials')
+						window.location='index';
+					</script>";
+				}
+					
+			}
 			include_once('index.php');
 			break;
+			
 			case '/profile':
 			include_once('profile.php');
 			break;
+			
 			case '/404':
 			include_once('404.php');
 			break;
+			
 			case '/dashboard':
 			include_once('dashboard.php');
 			break;
@@ -76,6 +107,14 @@ class control extends model
 				
 			}
 			include_once('add_cartype.php');
+			break;
+			
+			case '/employee_logout':
+			unset($_SESSION['employee']);
+			echo "<script>
+			alert('Logout success');
+			window.location='index';
+			</script>";
 			break;
 			
 			default:

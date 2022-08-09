@@ -13,5 +13,5 @@ print ($b.$b);
 
 //Parameter
 //$sum=echo $b;
-$sum=print($b);
+$sum=print($b); 
 ?>
