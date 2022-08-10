@@ -6,7 +6,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-
 <head>
 	<title>Rent my car</title>
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />

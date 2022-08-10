@@ -83,6 +83,10 @@ class control extends model
 							alert('Logout success')
 							window.location='index';
 					     </script>";
+						 
+			case '/profile':
+			include_once('profile.php');
+			break;
 			
 			default:
 			include_once('blog.php');
