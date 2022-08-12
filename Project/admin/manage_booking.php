@@ -38,13 +38,13 @@ include_once('header.php');
 					{
 					?>
 					  <tr>
-						<td><?php echo $mb->booking_id?></td>
-						<td><?php echo $mb->cust_id?></td>
-						<td><?php echo $mb->car_id?></td>
-						<td><?php echo $mb->book_date?></td>
-						<td><?php echo $mb->book_time?></td>
+						<td><?php echo $mb->booking_id;?></td>
+						<td><?php echo $mb->cust_id;?></td>
+						<td><?php echo $mb->car_id;?></td>
+						<td><?php echo $mb->book_date;?></td>
+						<td><?php echo $mb->book_time;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a href="delete?del_booking_id=<?php echo $mb->booking_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
 					}

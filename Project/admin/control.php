@@ -154,6 +154,47 @@ class control extends model
 			include_once('manage_user.php');
 			break;
 			
+			case '/delete':
+			if(isset($_REQUEST['del_cate_id']))
+			{
+				$cate_id=$_REQUEST['del_cate_id'];
+				$where=array('cate_id'=>$cate_id);
+				$res=$this->delete_where('category',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_cartype';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_emp_id']))
+			{
+				$emp_id=$_REQUEST['del_emp_id'];
+				$where=array('emp_id'=>$emp_id);
+				$res=$this->delete_where('employee',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_emp';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_booking_id']))
+			{
+				$booking_id=$_REQUEST['del_booking_id'];
+				$where=array('booking_id'=>$booking_id);
+				$res=$this->delete_where('booking',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('delete success')
+					window.location='manage_booking';
+					</script>";
+				}
+			}
+			
 			default:
 			include_once('404.php');
 			break;
