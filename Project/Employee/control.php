@@ -117,6 +117,96 @@ class control extends model
 			</script>";
 			break;
 			
+			case '/delete':
+			if(isset($_REQUEST['del_cust_id']))
+			{
+				$cust_id=$_REQUEST['del_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$res=$this->delete_where('customer',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_user';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cate_id']))
+			{
+				$cate_id=$_REQUEST['del_cate_id'];
+				$where=array("cate_id"=>$cate_id);
+				
+				$run=$this->select_where('category',$where);
+				$fetch=$run->fetch_object();
+				$cate_img=$fetch->cate_img;
+				
+				$res=$this->delete_where('category',$where);
+				if($res)
+				{
+					unlink('img/'.$cate_img);
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_cartype';
+					</script>";
+				}
+			}
+			
+			if(isset($_REQUEST['del_cont_id']))
+			{
+				$cont_id=$_REQUEST['del_cont_id'];
+				$where=array("cont_id"=>$cont_id);
+				$res=$this->delete_where('contact',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_contact';
+					</script>";
+				}
+			}
+			
+			if(isset($_REQUEST['del_booking_id']))
+			{
+				$booking_id=$_REQUEST['del_booking_id'];
+				$where=array("booking_id"=>$booking_id);
+				$res=$this->delete_where('booking',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_booking';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_payment_id']))
+			{
+				$payment_id=$_REQUEST['del_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$res=$this->delete_where('payment',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_payment';
+					</script>";
+				}
+			}
+			
+			if(isset($_REQUEST['del_car_id']))
+			{
+				$car_id=$_REQUEST['del_car_id'];
+				$where=array("car_id"=>$car_id);
+				$res=$this->delete_where('car',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_car';
+					</script>";
+				}
+			}
+			break;
+			
 			default:
 			include_once('404.php');
 			break;

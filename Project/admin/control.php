@@ -158,7 +158,7 @@ class control extends model
 			if(isset($_REQUEST['del_cate_id']))
 			{
 				$cate_id=$_REQUEST['del_cate_id'];
-				$where=array('cate_id'=>$cate_id);
+				$where=array("cate_id"=>$cate_id);
 				$res=$this->delete_where('category',$where);
 				if($res)
 				{
@@ -171,7 +171,7 @@ class control extends model
 			if(isset($_REQUEST['del_emp_id']))
 			{
 				$emp_id=$_REQUEST['del_emp_id'];
-				$where=array('emp_id'=>$emp_id);
+				$where=array("emp_id"=>$emp_id);
 				$res=$this->delete_where('employee',$where);
 				if($res)
 				{
@@ -184,13 +184,91 @@ class control extends model
 			if(isset($_REQUEST['del_booking_id']))
 			{
 				$booking_id=$_REQUEST['del_booking_id'];
-				$where=array('booking_id'=>$booking_id);
+				$where=array("booking_id"=>$booking_id);
 				$res=$this->delete_where('booking',$where);
 				if($res)
 				{
 					echo "<script>
 					alert('delete success')
 					window.location='manage_booking';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_client_id']))
+			{
+				$client_id=$_REQUEST['del_client_id'];
+				$where=array("client_id"=>$client_id);
+				$res=$this->delete_where('client',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_client';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cust_id']))
+			{
+				$cust_id=$_REQUEST['del_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$res=$this->delete_where('customer',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_user';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_cont_id']))
+			{
+				$cont_id=$_REQUEST['del_cont_id'];
+				$where=array("cont_id"=>$cont_id);
+				$res=$this->delete_where('contact',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_contact';
+					</script>";
+				}	
+			}
+			if(isset($_REQUEST['del_car_id']))
+			{
+				$car_id=$_REQUEST['del_car_id'];
+				$where=array("car_id"=>$car_id);
+				$res=$this->delete_where('car',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_car';
+					</script>";
+				}	
+			}
+			if(isset($_REQUEST['del_Feedback_id']))
+			{
+				$Feedback_id=$_REQUEST['del_Feedback_id'];
+				$where=array("Feedback_id"=>$Feedback_id);
+				$res=$this->delete_where('feedback',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_feedback';
+					</script>";
+				}
+			}
+			if(isset($_REQUEST['del_payment_id']))
+			{
+				$payment_id=$_REQUEST['del_payment_id'];
+				$where=array("payment_id"=>$payment_id);
+				$res=$this->delete_where('payment',$where);
+				if($res)
+				{
+					echo "<script>
+					alert('Delete success')
+					window.location='manage_payment';
 					</script>";
 				}
 			}

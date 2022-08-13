@@ -67,7 +67,11 @@ class control extends model
 				$res=$this->insert('customer',$arr);
 				if($res)
 				{
-					echo "<script> alert('Registered successfully') </script>";
+					echo "<script> 
+					alert('Registered successfully') 
+					window.location='index';
+					</script>";
+					
 				}
 				else
 				{
