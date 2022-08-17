@@ -58,12 +58,15 @@ class control extends model
 			case '/signup':
 			if(isset($_REQUEST['submit']))
 			{
+				$name=$_REQUEST['name'];
 				$user_name=$_REQUEST['user_name'];
 				$email_id=$_REQUEST['email_id'];
 				$password=$_REQUEST['pass'];
 				$pass=md5($password);
+				$contact_no=$_REQUEST['contact_no'];
+				$address=$_REQUEST['address'];
 				
-				$arr=array("user_name"=>$user_name,"email_id"=>$email_id,"pass"=>$pass);
+				$arr=array("name"=>$name,"user_name"=>$user_name,"email_id"=>$email_id,"pass"=>$pass,"contact_no"=>$contact_no,"address"=>$address);
 				$res=$this->insert('customer',$arr);
 				if($res)
 				{
@@ -89,7 +92,21 @@ class control extends model
 					     </script>";
 						 
 			case '/profile':
+			$where=array("user_name"=>$_SESSION['user_name']);
+			$run=$this->select_where('customer',$where);
+			$fetch=$run->fetch_object();
 			include_once('profile.php');
+			break;
+			
+			case '/editprofile':
+			if(isset($_REQUEST['edit_cust_id']))
+			{
+				$cust_id=$_REQUEST['edit_cust_id'];
+				$where=array("cust_id"=>$cust_id);
+				$run=$this->select_where('customer',$where);
+				$fetch=$run->fetch_object();
+			}
+			include_once('editprofile.php');
 			break;
 			
 			default:
