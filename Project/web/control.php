@@ -105,6 +105,25 @@ class control extends model
 				$where=array("cust_id"=>$cust_id);
 				$run=$this->select_where('customer',$where);
 				$fetch=$run->fetch_object();
+				
+				if(isset($_REQUEST['submit']))
+				{
+					$name=$_REQUEST['name'];
+					$user_name=$_REQUEST['user_name'];
+					$email_id=$_REQUEST['email_id'];
+					$contact_no=$_REQUEST['contact_no'];
+					$address=$_REQUEST['address'];
+					
+					$arr=array("name"=>$name,"user_name"=>$user_name,"email_id"=>$email_id,"contact_no"=>$contact_no,"address"=>$address);
+					$res=$this->update('customer',$arr,$where);
+					if($res)
+					{
+						echo "<script>
+						alert('Update Success');
+						window.location='profile';
+						</script>";
+					}
+				}
 			}
 			include_once('editprofile.php');
 			break;

@@ -67,12 +67,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<h6><?php echo $fetch->email_id;?></h6>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
-											<h5>Contact no</h5>
-											<h6><?php echo $fetch->contact_no;?></h6>
-										</div>
-										<div class="agile_main_grid_left2_grid_left">
 											<h5>Address</h5>
 											<h6><?php echo $fetch->address;?></h6>
+										</div>
+										<div class="agile_main_grid_left2_grid_left">
+											<h5>Contact no</h5>
+											<h6><?php echo $fetch->contact_no;?></h6>
 										</div>
 										<div class="clear"> </div>
 									</div>
