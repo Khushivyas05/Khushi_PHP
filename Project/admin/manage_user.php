@@ -15,12 +15,12 @@ include_once('header.php');
  	<div class="blank">
 	
 
-			<div class="blank-page">
+			<div class="blank-page" style="overflow:auto">
 				
 				<div class="container mt-3">
 				  <h2>Manage User</h2>
 
-				  <table class="table">
+				  <table class="table table-responsive">
 					<thead>
 					  <tr>
 						<th>Cust_id</th>
@@ -33,6 +33,7 @@ include_once('header.php');
 						<th>Driving license no.</th>
 						<th>Edit</th>
 						<th>Delete</th>
+						<th>Status</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -49,8 +50,10 @@ include_once('header.php');
 						<td><?php echo $mu->address;?></td>
 						<td><?php echo $mu->a_no;?></td>
 						<td><?php echo $mu->dl_no;?></td>
+						
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cust_id=<?php echo $mu->cust_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="status?status_cust_id=<?php echo $mu->cust_id;?>" class="btn btn-primary"><?php echo $mu->status;?></a></td>
 					  </tr>
 					  <?php
 						}

@@ -1,3 +1,17 @@
+<?php
+if(isset($_SESSION['user_name']))
+{
+	
+}
+else
+{
+	echo "<script>
+	window.location='index';
+	</script>
+	";
+}
+?>
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
