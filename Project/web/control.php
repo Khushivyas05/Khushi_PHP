@@ -38,11 +38,23 @@ class control extends model
 				$res=$run->num_rows;
 				if($res==1)
 				{
-					$_SESSION['user_name']=$user_name;
-					echo "<script>
-							 alert('Login success')
-							window.location='index';
-					     </script>";
+					$data=$run->fetch_object();
+					$status=$data->status;
+					if($status=="Unblock")
+					{
+						$_SESSION['user_name']=$user_name;
+						echo "<script>
+								alert('Login success')
+								window.location='index';
+							  </script>";
+					}
+					else
+					{
+						echo "<script>
+							alert('login failed due to Blocked')
+							window.location='login';
+							</script>";
+					}
 				}
 				else
 				{

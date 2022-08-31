@@ -23,11 +23,23 @@ class control extends model
 				
 				if($res==1)
 				{
-					$_SESSION['employee']=$user_name;
-					echo "<script>
-						alert('Login success')
-						window.location='dashboard';
-					</script>";
+					$data=$run->fetch_object();
+					$status=$data->status;
+					if($status=="Unblock")
+					{
+						$_SESSION['employee']=$user_name;
+						echo "<script>
+							alert('Login success')
+							window.location='dashboard';
+							</script>";
+					}
+					else
+					{
+						echo "<script>
+						alert('login failed due to block')
+						window.location='index';
+						</script>";
+					}
 				}
 				else
 				{

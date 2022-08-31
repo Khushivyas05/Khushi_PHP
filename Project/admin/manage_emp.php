@@ -31,6 +31,7 @@ include_once('header.php');
 						<th>Address</th>
 						<th>Edit</th>
 						<th>Delete</th>
+						<th>Status</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -47,6 +48,7 @@ include_once('header.php');
 						<td><?php echo $m->address;?></td>
 						<td><a href="#" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_emp_id=<?php echo $m->emp_id;?>" class="btn btn-danger">Delete</a></td>
+						<td><a href="status?status_emp_id=<?php echo $m->emp_id;?>" class="btn btn-primary"><?php echo $m->status;?></a></td>
 					  </tr>
 					  <?php
 						}
