@@ -47,6 +47,9 @@ class control extends model
 					</script>";
 			
 			case '/profile':
+			$where=array("user_name"=>$_SESSION['admin']);
+			$run=$this->select_where('admin',$where);
+			$fetch=$run->fetch_object();
 			include_once('profile.php');
 			break;
 			
