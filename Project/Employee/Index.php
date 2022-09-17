@@ -16,7 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Taxas</title>
+<title>Rent My Car</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Minimal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -28,6 +28,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <script src="js/jquery.min.js"> </script>
 <script src="js/bootstrap.min.js"> </script>
+<script>
+function validate()
+{
+	var user_name=document.forms["emplogin"]["user_name"].value;
+	if(user_name=="" || user_name==null)
+	{
+		alert("Please fill out user name");
+		return false;
+	}
+	var pass=document.forms["emplogin"]["pass"].value;
+	if(pass=="" || pass==null)
+	{
+		alert("Please fill out password");
+		return false;
+	}
+}
+</script>
 </head>
 <body>
 	<div class="login">
@@ -35,14 +52,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h1><a href="index">Employee Login  </a></h1>
 		<div class="login-bottom">
 			<h2>Login</h2>
-			<form action="" method="post" enctype="multipart/form-data">
+			<form name="emplogin" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
 			<div class="col-md-12">
 				<div class="login-mail">
-					<input type="text" name="user_name" placeholder="Username" required="">
+					<input type="text" name="user_name" placeholder="Username">
 					<i class="fa fa-envelope"></i>
 				</div>
 				<div class="login-mail">
-					<input type="password" name="pass" placeholder="Password" required="">
+					<input type="password" name="pass" placeholder="Password">
 					<i class="fa fa-lock"></i>
 				</div>
 				   <a class="news-letter " href="#">

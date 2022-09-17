@@ -114,16 +114,7 @@
 	<script src="js/bootstrap.js"></script>
 	
 	
-	<script src="js/modernizr.custom.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
-	<script src="js/jquery.min.js"></script>
-	<!----end-gallery---->
-	<script src="js/grid.js"></script>
-	<script>
-		$(function () {
-			Grid.init();
-		});
-	</script>
+	
 	
 </body>
 

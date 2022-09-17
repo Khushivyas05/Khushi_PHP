@@ -10,30 +10,53 @@ include_once('header.php');
 		 alert("Please fill out name");
 		 return false;
 	 }
+	 var alpha=/^[A-Za-z]+$/;
+	 if(!alpha.test(name))
+	 {
+		 alert("Please fill out only alpha characters");
+		 return false;
+	 }
+	 
 	 var user_name=document.forms["empform"]["user_name"].value;
 	 if(user_name==""|| user_name==null)
 	 {
 		 alert("Please fill out username");
 		 return false;
 	 }
+	 
 	 var email_id=document.forms["empform"]["email_id"].value;
 	 if(email_id==""|| email_id==null)
 	 {
 		 alert("Please fill out email");
 		 return false;
 	 }
+	 var mail=/^[a-zA-z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+	 if(!mail.test(email_id))
+	 {
+		 alert("Please fill out proper email id");
+		 return false;
+	 }
+	 
 	 var address=document.forms["empform"]["address"].value;
 	 if(address==""|| address==null)
 	 {
 		 alert("Please fill out address");
 		 return false;
 	 }
+	 
 	 var contact_no=document.forms["empform"]["contact_no"].value;
 	 if(contact_no==""|| contact_no==null)
 	 {
 		 alert("Please fill out contact number");
 		 return false;
 	 }
+	 var phone=/^[0-9]{10,11}$/;
+	 if(!phone.test(contact_no))
+	 {
+		 alert("Please fill out only digits");
+		 return false;
+	 }
+	 
 	 var pass=document.forms["empform"]["pass"].value;
 	 if(pass==""|| pass==null)
 	 {

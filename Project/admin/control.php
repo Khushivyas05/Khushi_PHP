@@ -108,6 +108,7 @@ class control extends model
 			}
 			include_once('add_emp.php');
 			break;
+			
 			case '/dashboard':
 			include_once('dashboard.php');
 			break;
