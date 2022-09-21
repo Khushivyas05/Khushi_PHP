@@ -40,8 +40,8 @@ include_once('header.php');
 						<td><?php echo $m->cate_id;?></td>
 						<td><?php echo $m->cate_name;?></td>
 						<td><?php echo $m->cate_des;?></td>
-						<td><img src="img/<?php echo $m->cate_img;?>" width="80px" height="80px"/></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><img src="img/cartype/<?php echo $m->cate_img;?>" width="80px" height="80px"/></td>
+						<td><a href="editcartype?edit_cate_id=<?php echo $m->cate_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_cate_id=<?php echo $m->cate_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

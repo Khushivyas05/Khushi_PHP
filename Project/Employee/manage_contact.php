@@ -37,12 +37,12 @@ include_once('header.php');
 					{
 					?>
 					  <tr>
-						<td><?php echo $m->cont_id?></td>
-						<td><?php echo $m->name?></td>
-						<td><?php echo $m->email_id?></td>
-						<td><?php echo $m->cont_no?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
-						<td><a href="delete?del_cont_id=<?php echo $m->cont_id?>" class="btn btn-danger">Delete</a></td>
+						<td><?php echo $m->cont_id;?></td>
+						<td><?php echo $m->name;?></td>
+						<td><?php echo $m->email_id;?></td>
+						<td><?php echo $m->cont_no;?></td>
+						<td><a href="editcontact?edit_cont_id=<?php echo $m->cont_id;?>" class="btn btn-primary">Edit</a></td>
+						<td><a href="delete?del_cont_id=<?php echo $m->cont_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
 					}

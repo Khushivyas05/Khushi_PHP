@@ -46,10 +46,10 @@ include_once('header.php');
 						<td><?php echo $m->name;?></td>
 						<td><?php echo $m->des;?></td>
 						<td><?php echo $m->price;?></td>
-						<td><?php echo $m->img;?></td>
+						<td><img src="img/car/<?php echo $m->img;?>" height="80" width="80"></td>
 						<td><?php echo $m->type;?></td>
 						<td><?php echo $m->fuel_type;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="editcar?edit_car_id=<?php echo $m->car_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_car_id=<?php echo $m->car_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php

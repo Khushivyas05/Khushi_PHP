@@ -39,7 +39,7 @@ include_once('header.php');
 						<td><?php echo $m->Feedback_id;?></td>
 						<td><?php echo $m->cust_id;?></td>
 						<td><?php echo $m->com;?></td>
-						<td><a href="#" class="btn btn-primary">Edit</a></td>
+						<td><a href="editfeedback?edit_Feedback_id=<?php echo $m->Feedback_id;?>" class="btn btn-primary">Edit</a></td>
 						<td><a href="delete?del_Feedback_id=<?php echo $m->Feedback_id;?>" class="btn btn-danger">Delete</a></td>
 					  </tr>
 					<?php
