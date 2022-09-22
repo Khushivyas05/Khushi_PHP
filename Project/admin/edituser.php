@@ -106,7 +106,7 @@ function validate()
             </div>
 			<div class="col-md-12 form-group1">
 			 <label class="control-label">Address</label>
-			 <textarea class="form-control" name="address" value="<?php echo $fetch->address;?>" placeholder="Address"><?php echo $fetch->address;?></textarea>
+			 <textarea class="form-control" name="address" placeholder="Address"><?php echo $fetch->address;?></textarea>
 			 </div>
              <div class="vali-form vali-form1">
             <div class="col-md-6 form-group1">

@@ -460,7 +460,8 @@ class control extends model
 					$name=$_REQUEST['name'];
 					$email_id=$_REQUEST['email_id'];
 					$cont_no=$_REQUEST['cont_no'];
-					$arr=array("cont_id"=>$cont_id,"name"=>$name,"email_id"=>$email_id,"cont_no"=>$cont_no);
+					$message=$_REQUEST['message'];
+					$arr=array("cont_id"=>$cont_id,"name"=>$name,"email_id"=>$email_id,"cont_no"=>$cont_no,"message"=>$message);
 					$res=$this->update('contact',$arr,$where);
 					if($res)
 					{

@@ -30,6 +30,12 @@ function validate()
 		alert("Please fill out contact number");
 		return false;
 	}
+	var message=document.forms["clientform"]["message"].value;
+	if(message=="" || message==null)
+	{
+		alert("Please fill out Message");
+		return false;
+	}
 	
 }
 </script>
@@ -61,7 +67,7 @@ function validate()
 			<div class="col-md-12 form-group1">
               <label class="control-label">Name</label>
               <input type="text" name="name" value="<?php echo $fetch->name;?>" placeholder="Name">
-            </div>
+            </div><br>
             <div class="clearfix"> </div>
 			
 			 
@@ -78,6 +84,12 @@ function validate()
             </div>
             <div class="clearfix"> </div>
             </div>
+			
+			<div class="col-md-12 form-group1">
+			 <label class="control-label">Message</label>
+			 <textarea class="form-control" name="message" placeholder="Message"><?php echo $fetch->message;?></textarea>
+			 </div><br><br><br>
+			 <div class="clearfix"> </div>
 			
 			
             <div class="clearfix"> </div>

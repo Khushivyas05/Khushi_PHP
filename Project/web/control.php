@@ -12,20 +12,50 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
+			//$arr=$this->selectall('category');
+			//$where=array("cate_name"=>$cate_name);
+			//$run=$this->select_where('category',$where);
+			//$fetch=$run->fetch_object();
 			include_once('index.php');
 			break;
+			
 			case '/gallery':
 			include_once('gallery.php');
 			break;
+			
 			case '/about':
 			include_once('about.php');
 			break;
+			
 			case '/contact':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$email_id=$_REQUEST['email_id'];
+				$cont_no=$_REQUEST['cont_no'];
+				$message=$_REQUEST['message'];
+				
+				$arr=array("name"=>$name,"email_id"=>$email_id,"cont_no"=>$cont_no,"message"=>$message);
+				$res=$this->insert('contact',$arr);
+				
+				if($res)
+				{
+					echo "<script>
+					alert('Inquiry Success');
+					</script>";
+				}
+				else
+				{
+					echo "Inquiry not success";
+				}
+			}	
 			include_once('contact.php');
 			break;
+			
 			case '/services':
 			include_once('services.php');
 			break;
+			
 			case '/login':
 			if(isset($_REQUEST['submit']))
 			{

@@ -164,8 +164,8 @@
 			<ul id="flexiselDemo3">
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic6.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img.jpg" alt=""/></a>
+						<h4>Maruti Suzuki Dzire</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.
 							</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
@@ -173,24 +173,24 @@
 				</li>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic5.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img1.jpg" alt=""/></a>
+						<h4>Mahindra Scorpio</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
 				</li>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic8.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img2.jpg" alt=""/></a>
+						<h4>Toyoto Fortuner</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
 				</li>
 				<li>
 					<div class="biseller-column">
-						<a href="#"><img src="images/pic4.jpg" alt=""/></a>
-						<h4>Donec lacinia</h4>
+						<a href="#"><img src="images/img3.jpg" alt=""/></a>
+						<h4>MINI Cooper</h4>
 						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
 					</div>
