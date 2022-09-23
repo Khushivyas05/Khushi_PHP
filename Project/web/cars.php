@@ -8,7 +8,7 @@ include_once('header.php');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CARS</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>gallery</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -38,6 +38,11 @@ include_once('header.php');
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			
+			<?php 
+			if(isset($_SESSION['user_name']))
+			{
+			?>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -50,23 +55,49 @@ include_once('header.php');
 				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about">About</a></li>
-						<li><a href="services">Services</a></li>
-						<li class="active"><a href="projects.html">Gallery</a></li>
+						<li><a href="category">Categories</a></li>
+						<li><a href="booking">Booking</a></li>
+						<li class="active"><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
+			<?php
+			}
+			else
+			{
+			?>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					  </button>
+				</div>
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="category">Categories</a></li>
+						<li><a href="contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+			<?php
+			}
+			?>
+				
 		</div>
 	</div>
 	<!---->
 	<div class="gallery">
 		<div class="container">
 			<div class="gallery-top gal_heading">
-				<h2>Our Gallery</h2>
+				<h2>Our Cars</h2>
 				<ol class="breadcrumb">
 					<li><a href="index">Home</a></li>
-					<li class="active">Gallery</li>
+					<li class="active">cars</li>
 				</ol>
 			</div>
 			<div class="gallery-bottom">

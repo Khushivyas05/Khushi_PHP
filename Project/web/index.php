@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CARS</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -38,6 +38,10 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			<?php
+			if(isset($_SESSION['user_name']))
+			{	
+			?>
 			<nav class="navbar navbar-default">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -50,13 +54,38 @@
 			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
-						<li><a href="about">About</a></li>
-						<li><a href="services">Services</a></li>
-						<li><a href="gallery">Gallery</a></li>
+						<li><a href="category">Categories</a></li>
+						<li><a href="booking">Booking</a></li>
+						<li><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
 			</nav>
+			<?php
+			}
+			else
+			{	
+			?>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					  </button>
+				</div>
+			   <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index">Home <span class="sr-only">(current)</span></a></li>
+						<li><a href="category">Categories</a></li>
+						<li><a href="contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+			<?php
+			}
+			?>
 			<div id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<li>
@@ -158,43 +187,26 @@
 	<div class="feature_sec">
 		<div class="container">
 			<div class="feature_head">
-				<h3>Featured News</h3>
+				<h3>Available gallery</h3>
 				<span></span>
 			</div>
 			<ul id="flexiselDemo3">
+				<?php
+				foreach($fetcharr as $data)
+				{
+				?>
 				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/img.jpg" alt=""/></a>
-						<h4>Maruti Suzuki Dzire</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.
+					<div class="biseller-column" height="500px">
+						<a href="#"><img src="../Employee/img/car/<?php echo $data->img;?>" height="250px" style="width:100%" alt=""/></a>
+						<h4><?php echo $data->name;?></h4>
+						<p><?php echo $data->des;?>
 							</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
+						<a class="more hvr-bounce-to-bottom" href="gallery">Rent Now..</a>
 					</div>
 				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/img1.jpg" alt=""/></a>
-						<h4>Mahindra Scorpio</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/img2.jpg" alt=""/></a>
-						<h4>Toyoto Fortuner</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
-				<li>
-					<div class="biseller-column">
-						<a href="#"><img src="images/img3.jpg" alt=""/></a>
-						<h4>MINI Cooper</h4>
-						<p>Cras pulvinar iaculis ex. Nullam vitae justo vel sapien malesuada varius ac blandit egestas nec felis. Nunc pharetra.</p>
-						<a class="more hvr-bounce-to-bottom" href="gallery">Read More..</a>
-					</div>
-				</li>
+				<?php
+				}
+				?>
 			</ul>
 			<div class="clearfix"></div>
 

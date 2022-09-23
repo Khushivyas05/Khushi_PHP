@@ -12,19 +12,17 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
-			//$arr=$this->selectall('category');
-			//$where=array("cate_name"=>$cate_name);
-			//$run=$this->select_where('category',$where);
-			//$fetch=$run->fetch_object();
+			$fetcharr=$this->selectall('car');
 			include_once('index.php');
 			break;
 			
-			case '/gallery':
-			include_once('gallery.php');
+			case '/cars':
+			$fetcharr=$this->selectall('car');
+			include_once('cars.php');
 			break;
 			
-			case '/about':
-			include_once('about.php');
+			case '/category':
+			include_once('category.php');
 			break;
 			
 			case '/contact':
@@ -52,8 +50,8 @@ class control extends model
 			include_once('contact.php');
 			break;
 			
-			case '/services':
-			include_once('services.php');
+			case '/booking':
+			include_once('booking.php');
 			break;
 			
 			case '/login':

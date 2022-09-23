@@ -105,7 +105,7 @@ class control extends model
 				$cate_des=$_REQUEST['cate_des'];
 				
 				$cate_img=$_FILES['cate_img']['name'];  
-				$path='img/'.$cate_img;
+				$path='img/cartype/'.$cate_img;
 				$dup_file=$_FILES['cate_img']['tmp_name'];
 				move_uploaded_file($dup_file,$path);
 				

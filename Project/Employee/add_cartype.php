@@ -53,10 +53,12 @@ function validate()
               <label class="control-label">Description</label>
               <input type="text" name="cate_des" placeholder="Description">
             </div> 
+			
 			<div class="col-md-12 form-group1 group-mail">
               <label class="control-label">Image</label>
               <input type="file" name="cate_img">
             </div>
+			
              <div class="clearfix"> </div>
              <div class="clearfix"> </div>
           
