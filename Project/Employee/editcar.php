@@ -28,18 +28,25 @@ function validate()
 		alert("Please fill out description");
 		return false;
 	}
+	var capacity=document.forms["clientform"]["capacity"].value;
+	if(capacity=="" || capacity==null)
+	{
+		alert("Please fill out capacity");
+		return false;
+	}
+	var mileage=document.forms["clientform"]["mileage"].value;
+	if(mileage=="" || mileage==null)
+	{
+		alert("Please fill out mileage");
+		return false;
+	}
 	var price=document.forms["clientform"]["price"].value;
 	if(price=="" || price==null)
 	{
 		alert("Please fill out price");
 		return false;
 	}
-	var img=document.forms["clientform"]["img"].value;
-	if(img=="" || img==null)
-	{
-		alert("Please upload image");
-		return false;
-	}
+	
 	var type=document.forms["clientform"]["type"].value;
 	if(type=="" || type==null)
 	{
@@ -97,6 +104,18 @@ function validate()
             </div>
              <div class="clearfix"> </div>
 			 
+			 <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Capacity</label>
+              <input type="text" name="capacity" value="<?php echo $fetch->capacity;?>"  placeholder="Description"><br>
+            </div>
+             <div class="clearfix"> </div>
+			 
+			 <div class="col-md-12 form-group1 group-mail">
+              <label class="control-label">Mileage</label>
+              <input type="text" name="mileage" value="<?php echo $fetch->mileage;?>"  placeholder="Description"><br>
+            </div>
+             <div class="clearfix"> </div>
+			 
             <div class="vali-form">
             <div class="col-md-6 form-group1">
               <label class="control-label">Price</label>
@@ -108,7 +127,7 @@ function validate()
             <div class="col-md-6 form-group1">
               <label class="control-label">Image</label>
               <input type="file" name="img" value="<?php echo $fetch->name;?>" placeholder="Image">
-			  <img src="img/car/<?php echo $fetch->img;?>" height="80" width="80">
+			  <img src="../web/img/car/<?php echo $fetch->img;?>" height="80" width="80">
             </div>
             <div class="col-md-6 form-group1 form-last">
               <label class="control-label">Type</label>

@@ -102,12 +102,20 @@ include_once('header.php');
 			</div>
 			<div class="gallery-bottom">
 				<ul id="og-grid" class="og-grid">
+				<?php
+				foreach($fetcharr as $data)
+				{
+				?>
 					<li>
-						<a href="single" data-largesrc="images/62.jpg" data-title="Maruti Suzuki Dzire" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
-							<img class="img-responsive" src="images/62.jpg" alt="img01"/>
+						<a href="single" data-largesrc="img/car/<?php echo $data->img;?>" data-title="<?php echo $data->name;?>" data-description="<?php echo $data->des;?><br> Capacity : <?php echo $data->capacity;?><br> Mileage : <?php echo $data->mileage;?><br> Price : <?php echo $data->price;?>">
+							<img class="img-responsive" src="img/car/<?php echo $data->img;?>" alt="img01"/>
 						</a>
 					</li>
-					<li>
+				<?php
+				}
+				?>
+					
+					<!--<li>
 						<a href="single" data-largesrc="images/2.jpg" data-title="Audi" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
 							<img class="img-responsive" src="images/2.jpg" alt="img02"/>
 						</a>
@@ -141,7 +149,7 @@ include_once('header.php');
 						<a href="single" data-largesrc="images/67.jpg" data-title="Honda city" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.Mauris dapibus eros eget metus consectetur, quis sollicitudin mi aliquam. Nunc ut tortor at risus faucibus sagittis. Vivamus ut elit mi. Proin vitae metus ante. Aenean rutrum quis tellus sed congue. Mauris id molestie magna. Suspendisse eleifend in mi sed vestibulum.">
 							<img class="img-responsive" src="images/67.jpg" alt="img01"/>
 						</a>
-					</li>
+					</li>-->
 					<div class="clearfix"> </div>
 				</ul>
 			</div>

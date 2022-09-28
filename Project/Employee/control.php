@@ -105,7 +105,7 @@ class control extends model
 				$cate_des=$_REQUEST['cate_des'];
 				
 				$cate_img=$_FILES['cate_img']['name'];  
-				$path='img/cartype/'.$cate_img;
+				$path='../web/img/cartype/'.$cate_img;
 				$dup_file=$_FILES['cate_img']['tmp_name'];
 				move_uploaded_file($dup_file,$path);
 				
@@ -158,7 +158,7 @@ class control extends model
 				$res=$this->delete_where('category',$where);
 				if($res)
 				{
-					unlink('img/'.$cate_img);
+					unlink('../web/img/cartype/'.$cate_img);
 					echo "<script>
 					alert('Delete success')
 					window.location='manage_cartype';
@@ -211,9 +211,15 @@ class control extends model
 			{
 				$car_id=$_REQUEST['del_car_id'];
 				$where=array("car_id"=>$car_id);
+				
+				$run=$this->select_where('car',$where);
+				$fetch=$run->fetch_object();
+				$img=$fetch->img;
+				
 				$res=$this->delete_where('car',$where);
 				if($res)
 				{
+					unlink('../web/img/car/'.$img);
 					echo "<script>
 					alert('Delete success')
 					window.location='manage_car';
@@ -308,7 +314,7 @@ class control extends model
 					if($_FILES['cate_img']['size']>0)
 					{
 						$cate_img=$_FILES['cate_img']['name'];
-						$path='img/cartype/'.$cate_img;
+						$path='../web/img/cartype/'.$cate_img;
 						$dup_file=$_FILES['cate_img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 						
@@ -316,7 +322,7 @@ class control extends model
 						$res=$this->update('category',$arr,$where);
 						if($res)
 						{
-							unlink('img/cartype/'.$old_file);
+							unlink('../web/img/cartype/'.$old_file);
 							echo "<script>
 							alert('Update success');
 							window.location='manage_cartype';
@@ -355,6 +361,8 @@ class control extends model
 					$client_id=$_REQUEST['client_id'];
 					$name=$_REQUEST['name'];
 					$des=$_REQUEST['des'];
+					$capacity=$_REQUEST['capacity'];
+					$mileage=$_REQUEST['mileage'];
 					$price=$_REQUEST['price'];
 					$type=$_REQUEST['type'];
 					$fuel_type=$_REQUEST['fuel_type'];
@@ -362,15 +370,15 @@ class control extends model
 					if($_FILES['img']['size']>0)
 					{
 						$img=$_FILES['img']['name'];
-						$path='img/car/'.$img;
+						$path='../web/img/car/'.$img;
 						$dup_file=$_FILES['img']['tmp_name'];
 						move_uploaded_file($dup_file,$path);
 						
-						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
+						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
 						$res=$this->update('car',$arr,$where);
 						if($res)
 						{
-							unlink('img/car/'.$old_file);
+							unlink('../web/img/car/'.$old_file);
 							echo "<script>
 							alert('Update success');
 							window.location='manage_car';
@@ -379,7 +387,7 @@ class control extends model
 					}
 					else
 					{
-						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
+						$arr=array("car_id"=>$car_id,"client_id"=>$client_id,"name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"price"=>$price,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
 						$res=$this->update('car',$arr,$where);
 						if($res)
 						{

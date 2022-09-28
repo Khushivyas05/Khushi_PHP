@@ -12,7 +12,7 @@ class control extends model
 		switch($path)
 		{
 			case '/index':
-			$fetcharr=$this->selectall('car');
+			$fetcharr=$this->selectall('category');
 			include_once('index.php');
 			break;
 			
@@ -23,6 +23,38 @@ class control extends model
 			
 			case '/category':
 			include_once('category.php');
+			break;
+			
+			case '/addcar':
+			if(isset($_REQUEST['submit']))
+			{
+				$name=$_REQUEST['name'];
+				$des=$_REQUEST['des'];
+				$capacity=$_REQUEST['capacity'];
+				$mileage=$_REQUEST['mileage'];
+				$type=$_REQUEST['type'];
+				$fuel_type=$_REQUEST['fuel_type'];
+				$img=$_FILES['img']['name'];
+				$path='../web/img/car/'.$img;
+				$dup_file=$_FILES['img']['tmp_name'];
+				move_uploaded_file($dup_file,$path);
+				
+				$arr=array("name"=>$name,"des"=>$des,"capacity"=>$capacity,"mileage"=>$mileage,"type"=>$type,"fuel_type"=>$fuel_type,"img"=>$img);
+				$res=$this->insert('car',$arr);
+				if($res)
+				{
+					echo "<script>
+					alert('Register success');
+					</script>";
+				}
+				else
+				{
+					echo "<script>
+					alert('Register unsuccess');
+					</script>";
+				}
+			}
+			include_once('addcar.php');
 			break;
 			
 			case '/contact':

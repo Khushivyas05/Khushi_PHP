@@ -74,7 +74,7 @@ function validate()
             <div class="col-md-6 form-group1">
               <label class="control-label">Image</label>
               <input type="file" name="cate_img" value="<?php echo $fetch->cate_img;?>" placeholder="Image">
-			  <img src="img/cartype/<?php echo $fetch->cate_img;?>" height="80" width="80">
+			  <img src="../web/img/cartype/<?php echo $fetch->cate_img;?>" height="80" width="80">
             </div>
 			
             </div>

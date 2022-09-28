@@ -1,49 +1,13 @@
 <?php
-	include_once('header.php');
+include_once('header.php');
 ?>
-<script>
-function validate()
-{
-	var booking_id=document.forms["clientform"]["booking_id"].value;
-	if(booking_id=="" || booking_id==null)
-	{
-		alert("Please fill out booking id");
-		return false;
-	}
-	var cust_id=document.forms["clientform"]["cust_id"].value;
-	if(cust_id=="" || cust_id==null)
-	{
-		alert("Please fill out cust id");
-		return false;
-	}
-	var car_id=document.forms["clientform"]["car_id"].value;
-	if(car_id=="" || car_id==null)
-	{
-		alert("Please fill out car id");
-		return false;
-	}
-	var book_date=document.forms["clientform"]["book_date"].value;
-	if(book_date=="" || book_date==null)
-	{
-		alert("Please fill out booking date");
-		return false;
-	}
-	var book_time=document.forms["clientform"]["book_time"].value;
-	if(book_time=="" || book_time==null)
-	{
-		alert("Please fill out booking time");
-		return false;
-	}
-	
-}
-</script>
 <body>
 	<!-- banner -->
 	<div class="banner banner2">
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" height="40px" width="40px" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -52,7 +16,7 @@ function validate()
 					{
 					?>
 					<button class="btn btn-light"><a href="logout">Logout</a></button>
-					<button class="btn btn-light"><a href="signup">My profile</a></button>
+					<button class="btn btn-light"><a href="profile">My profile</a></button>
 					<?php
 					}
 					else
@@ -73,6 +37,7 @@ function validate()
 				</div>
 				<div class="clearfix"></div>
 			</div>
+			
 			<?php 
 			if(isset($_SESSION['user_name']))
 			{
@@ -90,9 +55,9 @@ function validate()
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="category">Categories</a></li>
-						<li class="active"><a href="booking">Booking</a></li>
+						<li><a href="booking">Booking</a></li>
 						<li><a href="cars">Available cars</a></li>
-						<li><a href="addcar">Add your car</a></li>
+						<li class="active"><a href="addcar">Add your car</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -122,67 +87,97 @@ function validate()
 			<?php
 			}
 			?>
+				
 		</div>
 	</div>
 	<!---->
-	<div class="services">
+	<div class="gallery">
 		<div class="container">
-			<h2>Services</h2>
-			<ol class="breadcrumb">
-				<li><a href="index">Home</a></li>
-				<li class="active">Services</li>
-			</ol>
-			<form name="clientform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
-         	<div class="vali-form">
-            <div class="col-md-12 form-group1">
-              <label class="control-label">Booking ID</label>
-              <input type="text" class="form-control" name="booking_id" placeholder="Booking ID">
-            </div>
-            <div class="clearfix"> </div>
-            </div>
-            
-			<div class="col-md-12 form-group1"><br>
-              <label class="control-label">Cust ID</label>
-              <input type="text" class="form-control" name="cust_id" placeholder="Customer ID">
-            </div>
-            <div class="clearfix"> </div>
-			
+			<div class="gallery-top gal_heading">
+				<ol class="breadcrumb">
+					<li><a href="index">Home</a></li>
+					<li class="active">add car</li>
+				</ol>
+				<h2>Add your car</h2><br>
+			</div>
+			<div class="gallery-bottom">
+			<form name="clientform"  action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+         	
             <div class="col-md-12 form-group1 group-mail"><br>
-              <label class="control-label">Car ID</label>
-              <input type="text" class="form-control" name="car_id" placeholder="Car id">
+              <label class="control-label">Name:</label>
+              <input type="text" class="form-control" name="name" placeholder="Name">
             </div>
              <div class="clearfix"> </div>
 			 
 			<div class="col-md-12 form-group1 group-mail"><br>
-              <label class="control-label">Booking date</label>
-              <input type="text" class="form-control" name="book_date" placeholder="Booking date"><br>
+              <label class="control-label">Description:</label>
+              <input type="text" class="form-control" name="des" placeholder="Description"><br>
             </div>
              <div class="clearfix"> </div>
 			 
-            
+			 <div class="col-md-12 form-group1 group-mail"><br>
+              <label class="control-label">Capacity:</label>
+              <input type="text" class="form-control" name="capacity" placeholder="Capacity"><br>
+            </div>
+             <div class="clearfix"> </div>
+			
+			 <div class="col-md-12 form-group1 group-mail"><br>
+              <label class="control-label">Mileage:</label>
+              <input type="text" class="form-control" name="mileage" placeholder="Mileage"><br>
+            </div>
+             <div class="clearfix"> </div>
+			
+            <div class="vali-form">
             <div class="col-md-12 form-group1"><br>
-              <label class="control-label">Booking time</label>
-              <input type="text" class="form-control" name="book_time" placeholder="Booking Time">
+              <label class="control-label">Price:</label>
+              <input type="text" class="form-control" name="price" placeholder="Price">
             </div>
             <div class="clearfix"> </div>
-            
+            </div>
 			
+             <div class="vali-form vali-form1">
+            <div class="col-md-12 form-group1"><br>
+              <label class="control-label">Image:</label>
+              <input type="file" class="form-control" name="img" placeholder="Image">
+            </div>
 			
+            <div class="col-md-12 form-group1 form-last"><br>
+              <label class="control-label">Type:</label>
+              <input type="text" class="form-control" name="type" placeholder="Type">
+            </div>
             <div class="clearfix"> </div>
+            </div>
+			
+             <div class="col-md-12 form-group1 group-mail"><br>
+              <label class="control-label">Fuel Type:</label>
+              <input type="text" class="form-control" name="fuel_type" placeholder="Fuel Type">
+            </div>
              <div class="clearfix"> </div>
              <div class="clearfix"> </div>
-          
+			 
             <div class="col-md-12 form-group"><br>
               <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               <button type="reset" name="reset" class="btn btn-default">Reset</button>
             </div>
           <div class="clearfix"> </div>
+		  
         </form>
 			
-				<div class="clearfix"></div>
-			
+			<div class="clearfix"> </div>
+				
+			</div>
 		</div>
 	</div>
+	<script src="js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/jquery.min.js"></script>
+	<!----end-gallery---->
+	<script src="js/grid.js"></script>
+	<script>
+		$(function () {
+			Grid.init();
+		});
+	</script>
 <?php
 include_once('footer.php');
 ?>

@@ -187,7 +187,7 @@
 	<div class="feature_sec">
 		<div class="container">
 			<div class="feature_head">
-				<h3>Available gallery</h3>
+				<h3>Available Cars</h3>
 				<span></span>
 			</div>
 			<ul id="flexiselDemo3">
@@ -197,9 +197,9 @@
 				?>
 				<li>
 					<div class="biseller-column" height="500px">
-						<a href="#"><img src="../Employee/img/car/<?php echo $data->img;?>" height="250px" style="width:100%" alt=""/></a>
-						<h4><?php echo $data->name;?></h4>
-						<p><?php echo $data->des;?>
+						<a href="#"><img src="../Employee/img/cartype/<?php echo $data->cate_img;?>" height="250px" style="width:100%" alt=""/></a>
+						<h4><?php echo $data->cate_name;?></h4>
+						<p><?php echo $data->cate_des;?>
 							</p>
 						<a class="more hvr-bounce-to-bottom" href="gallery">Rent Now..</a>
 					</div>
