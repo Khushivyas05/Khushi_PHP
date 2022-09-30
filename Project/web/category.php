@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>gallery</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" height="40px" width="40px" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -57,6 +57,7 @@
 						<li class="active"><a href="category">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li><a href="cars">Available cars</a></li>
+						<li><a href="addcar">Add your car</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -79,6 +80,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li class="active"><a href="category">Categories</a></li>
+						<li><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -91,10 +93,10 @@
 	<!---->
 	<div class="about">
 		<div class="container">
-			<h2>About Us</h2>
+			<h2>Categories</h2>
 			<ol class="breadcrumb">
 				<li><a href="index">Home</a></li>
-				<li class="active">About</li>
+				<li class="active">Categories</li>
 			</ol>
 			<div class="about-grids">
 				<div class="col-md-4 about-pic">

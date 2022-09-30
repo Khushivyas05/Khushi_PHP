@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>gallery</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" height="40px" width="40px" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -57,6 +57,7 @@
 						<li><a href="category">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li><a href="cars">Available cars</a></li>
+						<li><a href="addcar">Add your car</a></li>
 						<li class="active"><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -79,6 +80,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="category">Categories</a></li>
+						<li><a href="cars">Available cars</a></li>
 						<li class="active"><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -114,7 +116,7 @@
 						</div>
 					</div>
 					<div class="col-md-9 contact-left">
-						<form>
+						<form action="" method="post" enctype="multipart/form-data">
 							<input type="text" name="name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" />
 							<input type="text" name="email_id" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
 							<input type="text" name="cont_no" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" />

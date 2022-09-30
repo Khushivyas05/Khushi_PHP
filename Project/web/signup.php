@@ -56,6 +56,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<label>Address</label>
 						<span></span>
 					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="a_no" required=""/>
+						<label>Aadhar card no.</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="dl_no" required=""/>
+						<label>Driving license</label>
+						<span></span>
+					</div>
 					<div class="wthree-text">  
 						<p>
 							<input type="checkbox" id="brand" value="">

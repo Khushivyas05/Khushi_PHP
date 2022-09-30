@@ -43,7 +43,7 @@ function validate()
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" height="40px" width="40px" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -115,6 +115,7 @@ function validate()
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="category">Categories</a></li>
+						<li><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -127,10 +128,10 @@ function validate()
 	<!---->
 	<div class="services">
 		<div class="container">
-			<h2>Services</h2>
+			<h2>Booking</h2>
 			<ol class="breadcrumb">
 				<li><a href="index">Home</a></li>
-				<li class="active">Services</li>
+				<li class="active">Booking</li>
 			</ol>
 			<form name="clientform" action="" method="post" enctype="multipart/form-data" onsubmit="return validate()">
          	<div class="vali-form">

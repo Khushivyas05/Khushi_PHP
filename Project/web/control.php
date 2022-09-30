@@ -137,8 +137,10 @@ class control extends model
 				$pass=md5($password);
 				$contact_no=$_REQUEST['contact_no'];
 				$address=$_REQUEST['address'];
+				$a_no=$_REQUEST['a_no'];
+				$dl_no=$_REQUEST['dl_no'];
 				
-				$arr=array("name"=>$name,"user_name"=>$user_name,"email_id"=>$email_id,"pass"=>$pass,"contact_no"=>$contact_no,"address"=>$address);
+				$arr=array("name"=>$name,"user_name"=>$user_name,"email_id"=>$email_id,"pass"=>$pass,"contact_no"=>$contact_no,"address"=>$address,"a_no"=>$a_no,"dl_no"=>$dl_no);
 				$res=$this->insert('customer',$arr);
 				if($res)
 				{

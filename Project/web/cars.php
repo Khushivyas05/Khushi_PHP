@@ -8,7 +8,7 @@ include_once('header.php');
 		<div class="container">
 			<div class="header">
 				<div class="logo">
-					<h1><a href="index"><img src="images/car.png" alt=""/>RENT<span>MY</span> <span>gallery</span></a></h1>
+					<h1><a href="index"><img src="images/car.png" height="40px" width="40px" alt=""/>RENT<span>MY</span> <span>CAR</span></a></h1>
 				</div>
 				<div class="top_details">
 				<ul>
@@ -58,6 +58,7 @@ include_once('header.php');
 						<li><a href="category">Categories</a></li>
 						<li><a href="booking">Booking</a></li>
 						<li class="active"><a href="cars">Available cars</a></li>
+						<li><a href="addcar">Add your car</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -80,6 +81,7 @@ include_once('header.php');
 					<ul class="nav navbar-nav">
 						<li><a href="index">Home <span class="sr-only">(current)</span></a></li>
 						<li><a href="category">Categories</a></li>
+						<li class="active"><a href="cars">Available cars</a></li>
 						<li><a href="contact">Contact Us</a></li>
 					</ul>
 				</div>
@@ -107,7 +109,7 @@ include_once('header.php');
 				{
 				?>
 					<li>
-						<a href="single" data-largesrc="img/car/<?php echo $data->img;?>" data-title="<?php echo $data->name;?>" data-description="<?php echo $data->des;?><br> Capacity : <?php echo $data->capacity;?><br> Mileage : <?php echo $data->mileage;?><br> Price : <?php echo $data->price;?>">
+						<a href="single" data-largesrc="img/car/<?php echo $data->img;?>" data-title="<?php echo $data->name;?>" data-description="<?php echo $data->des;?><br> Capacity : <?php echo $data->capacity;?><br> Mileage : <?php echo $data->mileage;?><br> Price : <?php echo $data->price;?><br> Type : <?php echo $data->type;?><br> Fuel Type : <?php echo $data->fuel_type;?><br><br> <button>Book Now</button>">
 							<img class="img-responsive" src="img/car/<?php echo $data->img;?>" alt="img01"/>
 						</a>
 					</li>
